@@ -34,14 +34,18 @@
             position: relative;
             overflow: hidden;
         }
-        #home img {
+        #home .video-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
             z-index: 1;
+        }
+        #home .video-bg iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         #home::before {
             content: '';
@@ -137,50 +141,53 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Placeholder Image -->
+    <!-- Hero Section with YouTube Video Background -->
     <section id="home" class="min-h-screen flex items-center justify-center text-white">
-        <img src="https://via.placeholder.com/1920x1080" alt="Hero Background" class="absolute top-0 left-0 w-full h-full object-cover z-1" loading="lazy">
+        <div class="video-bg" id="youtube-bg">
+            <iframe id="youtube-player" width="100%" height="100%" src="https://www.youtube.com/embed/4QxLA6VnX0g?autoplay=1&mute=1&loop=1&playlist=4QxLA6VnX0g&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
         <div class="text-center max-w-3xl mx-auto px-4">
             <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight" data-aos="fade-up" data-aos-duration="800">Hi, I'm Ryan Vorachak</h2>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 font-light" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Software Engineer & Photographer crafting innovative solutions with [list key skills, e.g., JavaScript, Python, React].</p>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 font-light" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Software Engineer & Photographer.</p>
             <a href="#projects" class="btn inline-block bg-[#00B5C8] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#0096A6] transition" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">View My Work</a>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100" data-aos="fade-up" data-aos-duration="800">My Projects</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden" data-aos="fade-right" data-aos-delay="0" data-aos-duration="800">
-                    <img src="https://via.placeholder.com/400x200" alt="Project 1" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="assets\project_widgets\RetroPedals_Widget_Bkg.jpg" alt="Project 1" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Project Title 1</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">A brief description of your project, highlighting the problem solved and technologies used (e.g., React, Node.js).</p>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Retro Pedals (TBD)</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A passion project of mine to recreate old guitar pedal sounds. Modern guitar pedal circuits somehow sound noticably worst than old effects. This is due to evolved construction of circuit components such as capacitors and resistors, but a huge part is also how these circuits are wired.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">Live Demo</a>
+                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">TBD</a>
                             <a href="#" class="text-[#00B5C8] hover:underline font-medium">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-                    <img src="https://via.placeholder.com/400x200" alt="Project 2" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="assets\project_widgets\Multieffects_Archetype_Widget_Bkg.jpg" alt="Project 2" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Project Title 2</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">A brief description of your project, highlighting the problem solved and technologies used (e.g., Python, Django).</p>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Multieffects Pedal</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A software driven digital effects pedal which utilizes Python and a Raspberry Pi to create an audio interface suite, right by your foot. Since there is only so much you can do on a tiny touchscreen, the pedal software will also have a desktop GUI accessible via bluetooth.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">Live Demo</a>
+                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">TBD</a>
                             <a href="#" class="text-[#00B5C8] hover:underline font-medium">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden" data-aos="fade-left" data-aos-delay="400" data-aos-duration="800">
-                    <img src="https://via.placeholder.com/400x200" alt="Project 3" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="assets\project_widgets\DBS_Widget_Bkg.png" alt="Project 3" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Project Title 3</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">A brief description of your project, highlighting the problem solved and technologies used (e.g., Java, Spring).</p>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Deadbeat Simulator</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Game development class project, where my team and I were task to create a game of our liking in Godot. Deadbeat Simulator is an overtly ambitious project which takes after the likes of the original Grand Theft Auto video games. This was a showcase of our skills and learning in Godot.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">Live Demo</a>
+                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">Download Godot</a>
                             <a href="#" class="text-[#00B5C8] hover:underline font-medium">GitHub</a>
                         </div>
                     </div>
@@ -294,7 +301,7 @@
                 <div data-aos="fade-left" data-aos-duration="800">
                     <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">I'm a software developer with a passion for building impactful solutions. My expertise includes [list skills, e.g., JavaScript, Python, cloud computing].</p>
                     <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">I specialize in creating [mention focus, e.g., web apps, APIs, or ML models] and thrive on solving complex problems. I also enjoy photography as a creative outlet.</p>
-                    <a href="path/to/your-resume.pdf" class="btn inline-block bg-[#F4A9BC] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#D989A0] transition" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">Download Resume</a>
+                    <a href="assets\about_me\ryan_vorachak_resume_edit13.pdf" class="btn inline-block bg-[#F4A9BC] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#D989A0] transition" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">Download Resume</a>
                 </div>
             </div>
         </div>
@@ -335,10 +342,31 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Smooth Scrolling, Dark Mode Toggle, AOS, Hamburger Menu, Typing Animation, and Swiper -->
+    <!-- JavaScript for Smooth Scrolling, Dark Mode Toggle, AOS, Hamburger Menu, Typing Animation, Swiper, and YouTube Player -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        // Load YouTube IFrame API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Initialize YouTube Player
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            event.target.mute();
+        }
+
         // Initialize AOS
         AOS.init({
             once: true,
