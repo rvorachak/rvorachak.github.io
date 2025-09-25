@@ -205,11 +205,11 @@
                 <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden" data-aos="fade-left" data-aos-delay="400" data-aos-duration="800">
                     <img src="https://via.placeholder.com/400x300" alt="Project 3" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Placeholder</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Hamburger.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">IdleClicker</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Python application runs on PC, MAC, and Linux. Some videos require you to sit and grind away hours by just simply staying active while the game runs. This app simply allows you do go perform other tasks while your game runs in the background.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">Download Godot</a>
-                            <a href="#" class="text-[#00B5C8] hover:underline font-medium">GitHub</a>
+                            <a href="https://github.com/rvorachak/IdleClicker_v1.0" class="text-[#00B5C8] hover:underline font-medium">Download v1.0</a>
+                            <a href="https://github.com/rvorachak/IdleClicker" class="text-[#00B5C8] hover:underline font-medium">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -344,21 +344,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100" data-aos="fade-up" data-aos-duration="800">Get in Touch</h2>
             <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-                <div class="space-y-6">
+                <form action="https://formspree.io/f/xyz123" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
-                        <input type="text" id="name" class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-[#A3ACB3] focus:border-[#A3ACB3] transition">
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-[#A3ACB3] focus:border-[#A3ACB3] transition bg-white dark:bg-gray-700">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
-                        <input type="email" id="email" class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-[#A3ACB3] focus:border-[#A3ACB3] transition">
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-[#A3ACB3] focus:border-[#A3ACB3] transition bg-white dark:bg-gray-700">
+                        <input type="hidden" name="_replyto" value="email">
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
-                        <textarea id="message" rows="4" class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-[#A3ACB3] focus:border-[#A3ACB3] transition"></textarea>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-[#A3ACB3] focus:border-[#A3ACB3] transition bg-white dark:bg-gray-700"></textarea>
                     </div>
-                    <button onclick="alert('Form submission not implemented yet. Connect via email: youremail@example.com')" class="btn w-full bg-[#A3ACB3] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#7F888D] transition" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">Send Message</button>
-                </div>
+                    <button type="submit" class="btn w-full bg-[#A3ACB3] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#7F888D] transition" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
